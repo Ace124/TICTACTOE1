@@ -6,7 +6,7 @@
  import Data.List
  
  type Move = (Int, Int, Char)
- --"[[\"x\",  0,  \"y\",  2, \"v\",   \"x\"],   [\"x\",   2, \"y\",  0, \"v\",  \"o\"]]"
+
  move :: String -> Maybe Move
  move m =
   let
@@ -56,7 +56,6 @@
  --to get rid of everything unnecessary
  removeGarbage :: [Char] -> [Char]
  removeGarbage g = odds $ removeSeaparator $ removeWhiteSpace $ removeLeftBrace $ removeRightBrace $ removeQuote g
- removeGarbage _ = []
  
  removeWhiteSpace :: [Char] -> [Char]
  removeWhiteSpace t = deleteAllInstances ' ' t
